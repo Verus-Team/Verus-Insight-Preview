@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfbf8">
+  <meta name="description" content="Verus-Insight: Towards Explainable Artifact Detection in AI-Generated Videos. Human-anchored full-process supervision, fine-grained artifact analysis, and Verus-Bench.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Verus-Insight | Explainable Video Artifact Detection">
+  <meta property="og:description" content="Inspect the details. Verify the evidence. Understand the video.">
+  <meta property="og:image" content="assets/figures/verus_data_training.png">
+  <title>Verus-Insight | Explainable Video Artifact Detection</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="wordmark" href="#top" aria-label="Verus-Insight home"><img src="assets/favicon.svg" alt="" width="31" height="31">Verus<span>Insight</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#overview">Method</a><a href="#benchmark">Verus-Bench</a><a href="#results">Results</a><a href="#release">Get started <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> VIDEO FORENSICS · HUMAN-ANCHORED EVIDENCE</p>
+        <h1 id="hero-title">Verus-<em>Insight</em></h1>
+        <p class="paper-title" id="paper-title">Towards Explainable Artifact Detection<br class="desktop-break"> in AI-Generated Videos</p>
+        <p class="hero-description">Learn what to inspect. Verify what is visible.<br>Ground the final decision in artifact evidence.</p>
+        <div class="authors" id="authors" aria-label="Authors and affiliations"></div>
+        <div class="resource-links" id="resources" aria-label="Project resources"></div>
+        <div class="hero-path" aria-label="Three complementary capabilities"><span>Inspection Planning</span><b aria-hidden="true">→</b><span>Evidence Verification</span><b aria-hidden="true">→</b><span>Evidence Aggregation</span></div>
+      </div>
+    </section>
+
+    <section class="section shell overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-label"><span>01 / MOTIVATION &amp; METHOD</span><span>FROM DECISIONS TO EVIDENCE</span></div>
+      <h2 id="overview-title">From a source label to <em>visible evidence.</em></h2>
+      <div class="intro-copy"><p>A correct real or AI-generated prediction does not guarantee that a detector has recovered the visible artifacts. It may overlook a relevant event, misinterpret what it sees, or reach the right verdict with incomplete evidence.</p><p>Verus-Insight separates this process into three complementary capabilities, and learns them through human-anchored full-process supervision.</p></div>
+      <ol class="capability-row">
+        <li><span class="capability-number">01</span><h3>Inspection Planning</h3><p>Determine what to inspect with content-specific criteria.</p></li>
+        <li><span class="capability-number">02</span><h3>Evidence Verification</h3><p>Verify each criterion against the video and recover concrete artifact evidence.</p></li>
+        <li><span class="capability-number">03</span><h3>Evidence Aggregation</h3><p>Integrate the verified observations into the final source decision.</p></li>
+      </ol>
+      <div class="method-summary"><h3>Human-anchored, full-process supervision.</h3><p>Human artifact annotations become outcome-neutral inspection criteria paired with their verification targets. Independently verified normal checks complement the artifact examples. The complete supervision follows Context → Rubric → Audit → Aggregation.</p><p>Built on Qwen3-VL-8B-Instruct, Verus-Insight learns through tracking and rubric warm-up, full-process supervised fine-tuning, and GRPO. At inference, the model generates its own inspection criteria and verifies them against the video.</p></div>
+      <div data-figure="training" data-priority="high" data-caption="Data construction and progressive training for Verus-Insight."></div>
+    </section>
+
+    <section class="benchmark-band" id="benchmark" aria-labelledby="benchmark-title"><div class="section shell">
+      <div class="section-label"><span>02 / VERUS-BENCH</span><span>HUMAN-PERCEIVABLE ARTIFACTS</span></div>
+      <div class="editorial-grid"><h2 id="benchmark-title">Verus-<em>Bench</em></h2><div class="body-copy"><p>Verus-Bench evaluates artifact detection on real and high-quality AI-generated videos. Each artifact annotation records an observation, its temporal extent, and frame-wise bounding boxes.</p><p>Generated videos are collected independently of the training and development sets. All artifact annotations undergo manual quality review.</p></div></div>
+      <div class="benchmark-stats"><div><strong>192</strong><span>videos<br>96 real · 96 AI-generated</span></div><div><strong>320</strong><span>manually annotated<br>artifact findings</span></div><div><strong>17</strong><span>artifact<br>categories</span></div></div>
+      <p class="benchmark-availability">Ground truth covers all 192 samples. Distributed media cover 166; acquisition references are provided for the remaining 26. <a href="https://huggingface.co/datasets/Verus-Team/Verus-Bench">Explore the dataset ↗</a></p>
+      <details class="benchmark-details"><summary>Explore the 17 artifact categories</summary><div id="category-counts"></div><p class="category-note">Each released finding is counted once by its artifact category. <a href="data/benchmark-statistics.json">View the source counts ↗</a></p></details>
+    </div></section>
+
+    <section class="section shell" id="results" aria-labelledby="results-title">
+      <div class="section-label"><span>03 / EXPERIMENTS</span><span>DETECTION · PLANNING · FINDING</span></div>
+      <div class="section-heading"><h2 id="results-title">Experimental <em>results.</em></h2><p>Paper-reported results for fine-grained artifact analysis, video-level detection, and component ablations.</p></div>
+      <div class="tabs results-tabs" role="tablist" aria-label="Evaluation results">
+        <button id="tab-finding" role="tab" aria-selected="true" aria-controls="panel-finding" tabindex="0">Fine-grained Analysis</button>
+        <button id="tab-detection" role="tab" aria-selected="false" aria-controls="panel-detection" tabindex="-1">Video-level Detection</button>
+        <button id="tab-ablation" role="tab" aria-selected="false" aria-controls="panel-ablation" tabindex="-1">Ablation</button>
+      </div>
+      <div id="panel-detection" role="tabpanel" aria-labelledby="tab-detection" tabindex="0" hidden>
+        <h3 class="table-title">Video-level detection across four benchmarks</h3>
+        <div id="table-detection"></div>
+        <p class="table-note">All values are percentages (↑ higher is better). Artifact-Bench T1: balanced accuracy; T2: accuracy; T3: exact-match accuracy. RewardData, ViF-Bench, and Verus-Bench: balanced accuracy. <span class="rank-best">Bold green</span> and <span class="rank-second">underlined</span> cells reproduce the manuscript's best and second-best markings among open-source models.</p>
+        <p class="result-takeaway">Verus-Insight leads the evaluated open-source models on RewardData, Verus-Bench, and Artifact-Bench T1 and T3. Performance varies across benchmarks; Skyra leads on ViF-Bench.</p>
+      </div>
+      <div id="panel-finding" role="tabpanel" aria-labelledby="tab-finding" tabindex="0">
+        <h3 class="table-title">Inspection planning and artifact finding</h3>
+        <div id="table-finding"></div>
+        <p class="table-note">P / R / F1 are precision, recall, and F1 (%; ↑ higher is better). Plan is evaluated on artifact-positive videos; Finding on the full set. Both use one-to-one semantic matching. Ranking marks follow the manuscript's open-source comparison.</p>
+        <p class="result-takeaway">On RewardData, Verus-Insight increases Finding F1 from 3.38 for its backbone to 35.42, with gains in both precision and recall. An unmatched reference comparison does not, by itself, establish that a visual observation is unsupported.</p>
+      </div>
+      <div id="panel-ablation" role="tabpanel" aria-labelledby="tab-ablation" tabindex="0" hidden>
+        <h3 class="table-title">What each training component contributes</h3>
+        <div id="table-ablation"></div>
+        <p class="table-note">BA: balanced accuracy. All values are percentages (↑ higher is better). Best and second-best markings follow the manuscript across the listed variants.</p>
+        <p class="result-takeaway">The full model has the highest Plan F1 and Finding F1 on both benchmarks. Removing the Stage-II rubric slightly improves BA, while reducing both fine-grained metrics. Stronger source classification does not necessarily imply better artifact understanding.</p>
+      </div>
+      <details class="protocol"><summary>How to read these results</summary><p>Balanced accuracy averages recall over the real and AI-generated classes. Plan measures coverage of inspection targets associated with reference artifacts. Finding measures recovery of the artifacts themselves. Predictions are matched one-to-one against the reference annotations; unmatched predicted findings count as false positives in this scoring protocol.</p><p>Results are transcribed from the manuscript and have not been recomputed for this release. Reference matching and visual validity are different questions. ViF-Bench source classification and the ViF-CoT-4K finding subset are separate evaluations.</p></details>
+    </section>
+
+    <section class="release-band" id="release" aria-labelledby="release-title"><div class="section shell">
+      <div class="section-label"><span>04 / EXPLORE THE PROJECT</span><span>VERUS-INSIGHT · VERUS-BENCH</span></div>
+      <div class="release-heading"><div><h2 id="release-title">Take a closer <em>look.</em></h2><p>Explore the inference code, the 8B model, and the benchmark.</p></div><span class="release-monogram" aria-hidden="true">V<span>↗</span></span></div>
+      <div class="release-links" id="release-links"></div>
+    </div></section>
+
+    <section class="section shell video-section" id="videos" aria-labelledby="videos-title" hidden>
+      <div class="section-label"><span>IN VIDEO</span></div>
+      <div class="section-heading"><h2 id="videos-title">Human annotations &amp; <em>model output.</em></h2><p>Fine-grained human reference annotations and Verus-Insight's artifact analysis.</p></div>
+      <div class="video-grid" id="video-grid"></div>
+    </section>
+    <p id="load-status" role="status" class="load-status shell">Loading authors, figures, and evaluation tables…</p>
+    <noscript><p class="shell load-status">Enable JavaScript to view the author list, complete result tables, and video examples. Research content is also available in <a href="data/site-content.json">the site data file</a>.</p></noscript>
+  </main>
+  <footer class="site-footer shell"><a class="wordmark" href="#top">Verus<span>Insight</span></a><p>Inspect. Verify. Understand.</p><a href="#top">Back to top ↑</a><p class="footer-credit">Research and figures © Verus-Insight authors. Initial layout reference: <a href="https://bxhsort.github.io/Thinking-Reward-Model/" target="_blank" rel="noopener noreferrer">Thinking Reward Model</a>.</p></footer>
+  <dialog id="image-dialog" aria-labelledby="image-title"><div class="dialog-toolbar"><h2 id="image-title">Figure preview</h2><div><a id="image-original" target="_blank" rel="noopener noreferrer">Open original ↗</a><button type="button" id="zoom-dialog" aria-pressed="false">Zoom in +</button><button type="button" id="close-dialog" aria-label="Close image preview">Close ×</button></div></div><div class="dialog-image-scroll"><img id="dialog-image" alt=""></div><p class="dialog-hint">Scroll to inspect · Escape to close</p></dialog>
+</body>
+</html>

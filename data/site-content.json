@@ -1,0 +1,1530 @@
+{
+  "project": {
+    "name": "Verus-Insight",
+    "title": "Towards Explainable Artifact Detection in AI-Generated Videos",
+    "source": "6ad098eb0f455bafd64b6076",
+    "snapshotDate": "2026-10-19",
+    "authors": [
+      {
+        "name": "Zhuoran Zhang",
+        "marks": "1,2,*"
+      },
+      {
+        "name": "Yang Shi",
+        "marks": "1,2,*,♠"
+      },
+      {
+        "name": "Qixun Wang",
+        "marks": "1,2,*"
+      },
+      {
+        "name": "Tengfei Liu",
+        "marks": "1"
+      },
+      {
+        "name": "Yuqi Tang",
+        "marks": "3"
+      },
+      {
+        "name": "Xuanyu Zhu",
+        "marks": "1"
+      },
+      {
+        "name": "Yizhuo Jia",
+        "marks": "4"
+      },
+      {
+        "name": "Jingyun Hua",
+        "marks": "2"
+      },
+      {
+        "name": "Shixuan Liu",
+        "marks": "5"
+      },
+      {
+        "name": "Xianghua Ying",
+        "marks": "1,†"
+      },
+      {
+        "name": "Haotian Wang",
+        "marks": "5,†"
+      },
+      {
+        "name": "Yuanxing Zhang",
+        "marks": "2,†"
+      },
+      {
+        "name": "Pengfei Wan",
+        "marks": "2"
+      },
+      {
+        "name": "Wenjing Yang",
+        "marks": ""
+      }
+    ],
+    "affiliations": [
+      {
+        "id": "1",
+        "name": "Peking University"
+      },
+      {
+        "id": "2",
+        "name": "Kling Team"
+      },
+      {
+        "id": "3",
+        "name": "HKUST (GZ)"
+      },
+      {
+        "id": "4",
+        "name": "Fudan University"
+      },
+      {
+        "id": "5",
+        "name": "Tsinghua University"
+      }
+    ],
+    "contributions": [
+      {
+        "mark": "*",
+        "label": "Equal Contribution"
+      },
+      {
+        "mark": "♠",
+        "label": "Project Lead"
+      },
+      {
+        "mark": "†",
+        "label": "Corresponding Author"
+      }
+    ]
+  },
+  "resources": [
+    {
+      "id": "paper",
+      "label": "Paper",
+      "url": null,
+      "published": false,
+      "caption": "arXiv link pending",
+      "linkToRelease": false
+    },
+    {
+      "id": "code",
+      "label": "Code",
+      "url": "https://github.com/Verus-Team/Verus-Insight",
+      "published": false,
+      "caption": "GitHub ↗",
+      "releaseTitle": "Inference code",
+      "releaseDescription": "Environment, model download & video inference",
+      "linkToRelease": true
+    },
+    {
+      "id": "model",
+      "label": "Model",
+      "url": "https://huggingface.co/Verus-Team/Verus-Insight-8B",
+      "published": false,
+      "caption": "Hugging Face ↗",
+      "releaseTitle": "Verus-Insight-8B",
+      "releaseDescription": "Qwen3-VL-8B-Instruct based detector",
+      "linkToRelease": true
+    },
+    {
+      "id": "dataset",
+      "label": "Dataset",
+      "url": "https://huggingface.co/datasets/Verus-Team/Verus-Bench",
+      "published": false,
+      "caption": "Hugging Face ↗",
+      "releaseTitle": "Verus-Bench",
+      "releaseDescription": "192 videos · 320 artifact findings",
+      "linkToRelease": true
+    }
+  ],
+  "figures": {
+    "training": {
+      "image": "assets/figures/verus_data_training.png",
+      "pdf": "assets/figures/verus_data_training.pdf",
+      "width": 3200,
+      "height": 2063,
+      "alt": "Human-anchored supervision construction and progressive three-stage training.",
+      "source": "figures/verus_data_training.pdf"
+    }
+  },
+  "tables": {
+    "detection": {
+      "source": {
+        "file": "section/5_experiment.tex",
+        "label": "tab:main-binary"
+      },
+      "rows": [
+        {
+          "model": "Gemini-3.1-Pro",
+          "group": "Proprietary models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "69.60",
+              "rank": null
+            },
+            {
+              "value": "57.20",
+              "rank": null
+            },
+            {
+              "value": "10.29",
+              "rank": null
+            },
+            {
+              "value": "51.60",
+              "rank": null
+            },
+            {
+              "value": "52.98",
+              "rank": null
+            },
+            {
+              "value": "51.04",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-3.6-Flash",
+          "group": "Proprietary models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "66.80",
+              "rank": null
+            },
+            {
+              "value": "62.00",
+              "rank": null
+            },
+            {
+              "value": "12.00",
+              "rank": null
+            },
+            {
+              "value": "90.52",
+              "rank": null
+            },
+            {
+              "value": "72.22",
+              "rank": null
+            },
+            {
+              "value": "88.02",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.5",
+          "group": "Proprietary models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "53.60",
+              "rank": null
+            },
+            {
+              "value": "52.80",
+              "rank": null
+            },
+            {
+              "value": "11.43",
+              "rank": null
+            },
+            {
+              "value": "93.81",
+              "rank": null
+            },
+            {
+              "value": "62.66",
+              "rank": null
+            },
+            {
+              "value": "89.06",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "InternVL3.5-8B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "49.80",
+              "rank": null
+            },
+            {
+              "value": "42.40",
+              "rank": null
+            },
+            {
+              "value": "3.43",
+              "rank": null
+            },
+            {
+              "value": "53.06",
+              "rank": null
+            },
+            {
+              "value": "46.29",
+              "rank": null
+            },
+            {
+              "value": "50.00",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "InternVL3.5-30B-A3B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "50.00",
+              "rank": null
+            },
+            {
+              "value": "44.40",
+              "rank": null
+            },
+            {
+              "value": "6.29",
+              "rank": null
+            },
+            {
+              "value": "52.58",
+              "rank": null
+            },
+            {
+              "value": "49.79",
+              "rank": null
+            },
+            {
+              "value": "55.73",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5-9B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "50.00",
+              "rank": null
+            },
+            {
+              "value": "31.20",
+              "rank": null
+            },
+            {
+              "value": "3.14",
+              "rank": null
+            },
+            {
+              "value": "43.98",
+              "rank": null
+            },
+            {
+              "value": "39.48",
+              "rank": null
+            },
+            {
+              "value": "44.27",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5-35B-A3B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "49.00",
+              "rank": null
+            },
+            {
+              "value": "26.00",
+              "rank": null
+            },
+            {
+              "value": "0.86",
+              "rank": null
+            },
+            {
+              "value": "57.20",
+              "rank": null
+            },
+            {
+              "value": "46.35",
+              "rank": null
+            },
+            {
+              "value": "45.83",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-VL-8B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "50.80",
+              "rank": null
+            },
+            {
+              "value": "44.80",
+              "rank": null
+            },
+            {
+              "value": "4.86",
+              "rank": null
+            },
+            {
+              "value": "48.81",
+              "rank": null
+            },
+            {
+              "value": "54.25",
+              "rank": null
+            },
+            {
+              "value": "66.67",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-VL-30B-A3B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "50.20",
+              "rank": null
+            },
+            {
+              "value": "44.40",
+              "rank": null
+            },
+            {
+              "value": "6.29",
+              "rank": null
+            },
+            {
+              "value": "52.70",
+              "rank": null
+            },
+            {
+              "value": "49.70",
+              "rank": null
+            },
+            {
+              "value": "65.10",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Skyra",
+          "group": "Open-source specialized models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "50.60",
+              "rank": null
+            },
+            {
+              "value": "42.00",
+              "rank": null
+            },
+            {
+              "value": "5.71",
+              "rank": null
+            },
+            {
+              "value": "84.14",
+              "rank": null
+            },
+            {
+              "value": "63.81",
+              "rank": "best"
+            },
+            {
+              "value": "69.27",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "BusterX++",
+          "group": "Open-source specialized models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "48.40",
+              "rank": null
+            },
+            {
+              "value": "30.40",
+              "rank": null
+            },
+            {
+              "value": "3.71",
+              "rank": null
+            },
+            {
+              "value": "88.40",
+              "rank": null
+            },
+            {
+              "value": "61.40",
+              "rank": "second"
+            },
+            {
+              "value": "69.27",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "VideoVeritas",
+          "group": "Open-source specialized models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "61.40",
+              "rank": "second"
+            },
+            {
+              "value": "50.40",
+              "rank": "best"
+            },
+            {
+              "value": "8.00",
+              "rank": "second"
+            },
+            {
+              "value": "91.12",
+              "rank": "second"
+            },
+            {
+              "value": "57.86",
+              "rank": null
+            },
+            {
+              "value": "79.17",
+              "rank": "second"
+            }
+          ]
+        },
+        {
+          "model": "Verus-Insight (Ours)",
+          "group": "Ours",
+          "ours": true,
+          "cells": [
+            {
+              "value": "66.60",
+              "rank": "best"
+            },
+            {
+              "value": "45.60",
+              "rank": "second"
+            },
+            {
+              "value": "8.29",
+              "rank": "best"
+            },
+            {
+              "value": "94.79",
+              "rank": "best"
+            },
+            {
+              "value": "60.51",
+              "rank": null
+            },
+            {
+              "value": "89.06",
+              "rank": "best"
+            }
+          ]
+        }
+      ]
+    },
+    "finding": {
+      "source": {
+        "file": "section/5_experiment.tex",
+        "label": "tab:main-finding"
+      },
+      "rows": [
+        {
+          "model": "Gemini-3.1-Pro",
+          "group": "Proprietary models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "26.35",
+              "rank": null
+            },
+            {
+              "value": "27.41",
+              "rank": null
+            },
+            {
+              "value": "26.87",
+              "rank": null
+            },
+            {
+              "value": "13.91",
+              "rank": null
+            },
+            {
+              "value": "26.17",
+              "rank": null
+            },
+            {
+              "value": "18.16",
+              "rank": null
+            },
+            {
+              "value": "22.83",
+              "rank": null
+            },
+            {
+              "value": "46.15",
+              "rank": null
+            },
+            {
+              "value": "30.55",
+              "rank": null
+            },
+            {
+              "value": "6.29",
+              "rank": null
+            },
+            {
+              "value": "42.86",
+              "rank": null
+            },
+            {
+              "value": "10.97",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-3.6-Flash",
+          "group": "Proprietary models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "31.15",
+              "rank": null
+            },
+            {
+              "value": "37.07",
+              "rank": null
+            },
+            {
+              "value": "33.85",
+              "rank": null
+            },
+            {
+              "value": "25.67",
+              "rank": null
+            },
+            {
+              "value": "29.91",
+              "rank": null
+            },
+            {
+              "value": "27.63",
+              "rank": null
+            },
+            {
+              "value": "22.98",
+              "rank": null
+            },
+            {
+              "value": "59.34",
+              "rank": null
+            },
+            {
+              "value": "33.13",
+              "rank": null
+            },
+            {
+              "value": "16.64",
+              "rank": null
+            },
+            {
+              "value": "54.95",
+              "rank": null
+            },
+            {
+              "value": "25.54",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.5",
+          "group": "Proprietary models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "23.93",
+              "rank": null
+            },
+            {
+              "value": "45.17",
+              "rank": null
+            },
+            {
+              "value": "31.28",
+              "rank": null
+            },
+            {
+              "value": "18.47",
+              "rank": null
+            },
+            {
+              "value": "32.40",
+              "rank": null
+            },
+            {
+              "value": "23.53",
+              "rank": null
+            },
+            {
+              "value": "14.69",
+              "rank": null
+            },
+            {
+              "value": "65.93",
+              "rank": null
+            },
+            {
+              "value": "24.02",
+              "rank": null
+            },
+            {
+              "value": "10.84",
+              "rank": null
+            },
+            {
+              "value": "54.40",
+              "rank": null
+            },
+            {
+              "value": "18.08",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "InternVL3.5-8B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "8.16",
+              "rank": null
+            },
+            {
+              "value": "13.71",
+              "rank": null
+            },
+            {
+              "value": "10.23",
+              "rank": null
+            },
+            {
+              "value": "2.23",
+              "rank": null
+            },
+            {
+              "value": "5.30",
+              "rank": null
+            },
+            {
+              "value": "3.14",
+              "rank": null
+            },
+            {
+              "value": "7.64",
+              "rank": null
+            },
+            {
+              "value": "33.52",
+              "rank": null
+            },
+            {
+              "value": "12.45",
+              "rank": null
+            },
+            {
+              "value": "1.30",
+              "rank": null
+            },
+            {
+              "value": "13.19",
+              "rank": null
+            },
+            {
+              "value": "2.36",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "InternVL3.5-30B-A3B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "10.33",
+              "rank": null
+            },
+            {
+              "value": "14.64",
+              "rank": null
+            },
+            {
+              "value": "12.11",
+              "rank": null
+            },
+            {
+              "value": "2.14",
+              "rank": null
+            },
+            {
+              "value": "2.49",
+              "rank": null
+            },
+            {
+              "value": "2.31",
+              "rank": null
+            },
+            {
+              "value": "10.27",
+              "rank": null
+            },
+            {
+              "value": "35.16",
+              "rank": null
+            },
+            {
+              "value": "15.90",
+              "rank": null
+            },
+            {
+              "value": "1.63",
+              "rank": null
+            },
+            {
+              "value": "6.04",
+              "rank": null
+            },
+            {
+              "value": "2.57",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5-9B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "10.04",
+              "rank": null
+            },
+            {
+              "value": "15.89",
+              "rank": null
+            },
+            {
+              "value": "12.30",
+              "rank": null
+            },
+            {
+              "value": "3.17",
+              "rank": null
+            },
+            {
+              "value": "14.02",
+              "rank": "second"
+            },
+            {
+              "value": "5.17",
+              "rank": null
+            },
+            {
+              "value": "6.96",
+              "rank": null
+            },
+            {
+              "value": "24.18",
+              "rank": null
+            },
+            {
+              "value": "10.81",
+              "rank": null
+            },
+            {
+              "value": "1.28",
+              "rank": null
+            },
+            {
+              "value": "19.78",
+              "rank": null
+            },
+            {
+              "value": "2.41",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5-35B-A3B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "8.85",
+              "rank": null
+            },
+            {
+              "value": "10.59",
+              "rank": null
+            },
+            {
+              "value": "9.65",
+              "rank": null
+            },
+            {
+              "value": "2.28",
+              "rank": null
+            },
+            {
+              "value": "2.49",
+              "rank": null
+            },
+            {
+              "value": "2.38",
+              "rank": null
+            },
+            {
+              "value": "5.56",
+              "rank": null
+            },
+            {
+              "value": "19.23",
+              "rank": null
+            },
+            {
+              "value": "8.62",
+              "rank": null
+            },
+            {
+              "value": "0.56",
+              "rank": null
+            },
+            {
+              "value": "2.75",
+              "rank": null
+            },
+            {
+              "value": "0.92",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-VL-8B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "12.11",
+              "rank": null
+            },
+            {
+              "value": "28.97",
+              "rank": "second"
+            },
+            {
+              "value": "17.08",
+              "rank": null
+            },
+            {
+              "value": "5.18",
+              "rank": null
+            },
+            {
+              "value": "14.02",
+              "rank": "second"
+            },
+            {
+              "value": "7.56",
+              "rank": null
+            },
+            {
+              "value": "11.13",
+              "rank": null
+            },
+            {
+              "value": "57.69",
+              "rank": "second"
+            },
+            {
+              "value": "18.67",
+              "rank": null
+            },
+            {
+              "value": "1.87",
+              "rank": null
+            },
+            {
+              "value": "18.13",
+              "rank": null
+            },
+            {
+              "value": "3.38",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-VL-30B-A3B",
+          "group": "Open-source general-purpose models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "16.20",
+              "rank": null
+            },
+            {
+              "value": "39.56",
+              "rank": "best"
+            },
+            {
+              "value": "22.99",
+              "rank": "second"
+            },
+            {
+              "value": "6.95",
+              "rank": null
+            },
+            {
+              "value": "11.21",
+              "rank": null
+            },
+            {
+              "value": "8.58",
+              "rank": "second"
+            },
+            {
+              "value": "11.79",
+              "rank": null
+            },
+            {
+              "value": "68.13",
+              "rank": "best"
+            },
+            {
+              "value": "20.10",
+              "rank": null
+            },
+            {
+              "value": "3.35",
+              "rank": null
+            },
+            {
+              "value": "4.40",
+              "rank": null
+            },
+            {
+              "value": "3.80",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Skyra",
+          "group": "Open-source specialized models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "17.16",
+              "rank": "second"
+            },
+            {
+              "value": "14.33",
+              "rank": null
+            },
+            {
+              "value": "15.62",
+              "rank": null
+            },
+            {
+              "value": "11.56",
+              "rank": "second"
+            },
+            {
+              "value": "5.30",
+              "rank": null
+            },
+            {
+              "value": "7.26",
+              "rank": null
+            },
+            {
+              "value": "19.48",
+              "rank": "second"
+            },
+            {
+              "value": "41.21",
+              "rank": null
+            },
+            {
+              "value": "26.46",
+              "rank": "second"
+            },
+            {
+              "value": "9.71",
+              "rank": "second"
+            },
+            {
+              "value": "25.82",
+              "rank": null
+            },
+            {
+              "value": "14.11",
+              "rank": "second"
+            }
+          ]
+        },
+        {
+          "model": "BusterX++",
+          "group": "Open-source specialized models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "8.09",
+              "rank": null
+            },
+            {
+              "value": "13.71",
+              "rank": null
+            },
+            {
+              "value": "10.17",
+              "rank": null
+            },
+            {
+              "value": "2.11",
+              "rank": null
+            },
+            {
+              "value": "6.23",
+              "rank": null
+            },
+            {
+              "value": "3.15",
+              "rank": null
+            },
+            {
+              "value": "4.99",
+              "rank": null
+            },
+            {
+              "value": "22.53",
+              "rank": null
+            },
+            {
+              "value": "8.17",
+              "rank": null
+            },
+            {
+              "value": "1.52",
+              "rank": null
+            },
+            {
+              "value": "13.19",
+              "rank": null
+            },
+            {
+              "value": "2.73",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "VideoVeritas",
+          "group": "Open-source specialized models",
+          "ours": false,
+          "cells": [
+            {
+              "value": "11.15",
+              "rank": null
+            },
+            {
+              "value": "19.63",
+              "rank": null
+            },
+            {
+              "value": "14.22",
+              "rank": null
+            },
+            {
+              "value": "4.10",
+              "rank": null
+            },
+            {
+              "value": "7.48",
+              "rank": null
+            },
+            {
+              "value": "5.30",
+              "rank": null
+            },
+            {
+              "value": "11.19",
+              "rank": null
+            },
+            {
+              "value": "44.51",
+              "rank": null
+            },
+            {
+              "value": "17.88",
+              "rank": null
+            },
+            {
+              "value": "4.79",
+              "rank": null
+            },
+            {
+              "value": "36.26",
+              "rank": "second"
+            },
+            {
+              "value": "8.47",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Verus-Insight (Ours)",
+          "group": "Ours",
+          "ours": true,
+          "cells": [
+            {
+              "value": "23.91",
+              "rank": "best"
+            },
+            {
+              "value": "25.55",
+              "rank": null
+            },
+            {
+              "value": "24.70",
+              "rank": "best"
+            },
+            {
+              "value": "17.14",
+              "rank": "best"
+            },
+            {
+              "value": "14.95",
+              "rank": "best"
+            },
+            {
+              "value": "15.97",
+              "rank": "best"
+            },
+            {
+              "value": "23.43",
+              "rank": "best"
+            },
+            {
+              "value": "47.25",
+              "rank": null
+            },
+            {
+              "value": "31.33",
+              "rank": "best"
+            },
+            {
+              "value": "33.66",
+              "rank": "best"
+            },
+            {
+              "value": "37.36",
+              "rank": "best"
+            },
+            {
+              "value": "35.42",
+              "rank": "best"
+            }
+          ]
+        }
+      ]
+    },
+    "ablation": {
+      "source": {
+        "file": "section/5_experiment.tex",
+        "label": "tab:main-ablation"
+      },
+      "rows": [
+        {
+          "model": "Qwen3-VL-8B Base",
+          "group": "Ablations",
+          "ours": false,
+          "cells": [
+            {
+              "value": "66.67",
+              "rank": null
+            },
+            {
+              "value": "17.08",
+              "rank": null
+            },
+            {
+              "value": "7.56",
+              "rank": null
+            },
+            {
+              "value": "48.81",
+              "rank": null
+            },
+            {
+              "value": "18.67",
+              "rank": null
+            },
+            {
+              "value": "3.38",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "Verus-Insight",
+          "group": "Ablations",
+          "ours": true,
+          "cells": [
+            {
+              "value": "89.06",
+              "rank": "second"
+            },
+            {
+              "value": "24.70",
+              "rank": "best"
+            },
+            {
+              "value": "15.97",
+              "rank": "best"
+            },
+            {
+              "value": "94.79",
+              "rank": "second"
+            },
+            {
+              "value": "31.33",
+              "rank": "best"
+            },
+            {
+              "value": "35.42",
+              "rank": "best"
+            }
+          ]
+        },
+        {
+          "model": "w/o Stage-II rubric",
+          "group": "Ablations",
+          "ours": false,
+          "cells": [
+            {
+              "value": "90.63",
+              "rank": "best"
+            },
+            {
+              "value": "21.54",
+              "rank": null
+            },
+            {
+              "value": "13.76",
+              "rank": null
+            },
+            {
+              "value": "96.07",
+              "rank": "best"
+            },
+            {
+              "value": "26.57",
+              "rank": null
+            },
+            {
+              "value": "29.35",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "w/o Perception Warm-up",
+          "group": "Ablations",
+          "ours": false,
+          "cells": [
+            {
+              "value": "88.02",
+              "rank": null
+            },
+            {
+              "value": "22.49",
+              "rank": "second"
+            },
+            {
+              "value": "14.40",
+              "rank": "second"
+            },
+            {
+              "value": "94.03",
+              "rank": null
+            },
+            {
+              "value": "28.47",
+              "rank": "second"
+            },
+            {
+              "value": "33.16",
+              "rank": "second"
+            }
+          ]
+        },
+        {
+          "model": "w/o rubric Warm-up",
+          "group": "Ablations",
+          "ours": false,
+          "cells": [
+            {
+              "value": "87.50",
+              "rank": null
+            },
+            {
+              "value": "22.03",
+              "rank": null
+            },
+            {
+              "value": "14.29",
+              "rank": null
+            },
+            {
+              "value": "93.70",
+              "rank": null
+            },
+            {
+              "value": "27.87",
+              "rank": null
+            },
+            {
+              "value": "32.24",
+              "rank": null
+            }
+          ]
+        },
+        {
+          "model": "w/o RL",
+          "group": "Ablations",
+          "ours": false,
+          "cells": [
+            {
+              "value": "86.46",
+              "rank": null
+            },
+            {
+              "value": "20.99",
+              "rank": null
+            },
+            {
+              "value": "13.53",
+              "rank": null
+            },
+            {
+              "value": "93.07",
+              "rank": null
+            },
+            {
+              "value": "26.00",
+              "rank": null
+            },
+            {
+              "value": "30.35",
+              "rank": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "videos": [
+    {
+      "id": "human",
+      "title": "Human fine-grained annotations",
+      "description": "Reference artifact descriptions with temporal and spatial annotations.",
+      "src": null,
+      "poster": null,
+      "type": "video/mp4"
+    },
+    {
+      "id": "model",
+      "title": "Verus-Insight output",
+      "description": "The model’s inspection criteria, verified findings, and final source decision.",
+      "src": null,
+      "poster": null,
+      "type": "video/mp4"
+    }
+  ],
+  "benchmark": {
+    "categories": {
+      "Abnormal Animal Body Structure": 31,
+      "Abnormal General Object Structure": 30,
+      "Abnormal Human Body Structure": 50,
+      "Abnormal Multi-Object Merging": 11,
+      "Abnormal Object Appearance": 39,
+      "Abnormal Object Disappearance": 17,
+      "Abnormal Object Splitting": 10,
+      "Abnormal Rigid-Body Crossing": 5,
+      "Color Anomaly": 11,
+      "Environment Consistency Violation": 4,
+      "General Interaction Anomaly": 7,
+      "General Object Identity Inconsistency": 10,
+      "Shape Distortion": 23,
+      "Text Distortion": 33,
+      "Texture Jittering": 11,
+      "Unnatural Movement": 3,
+      "Violation of Physics": 25
+    },
+    "findings": 320,
+    "labels": {
+      "fake": 96,
+      "real": 96
+    },
+    "samples": 192,
+    "snapshot": "35dc3e8e7e8f2b14a808dab1f1a7a453906586bc",
+    "source": "https://huggingface.co/datasets/Verus-Team/Verus-Bench/blob/main/ground_truth.jsonl",
+    "verifiedDate": "2026-10-19"
+  }
+}

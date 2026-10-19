@@ -1,0 +1,30 @@
+{
+  "categories": {
+    "Abnormal Animal Body Structure": 31,
+    "Abnormal General Object Structure": 30,
+    "Abnormal Human Body Structure": 50,
+    "Abnormal Multi-Object Merging": 11,
+    "Abnormal Object Appearance": 39,
+    "Abnormal Object Disappearance": 17,
+    "Abnormal Object Splitting": 10,
+    "Abnormal Rigid-Body Crossing": 5,
+    "Color Anomaly": 11,
+    "Environment Consistency Violation": 4,
+    "General Interaction Anomaly": 7,
+    "General Object Identity Inconsistency": 10,
+    "Shape Distortion": 23,
+    "Text Distortion": 33,
+    "Texture Jittering": 11,
+    "Unnatural Movement": 3,
+    "Violation of Physics": 25
+  },
+  "findings": 320,
+  "labels": {
+    "fake": 96,
+    "real": 96
+  },
+  "samples": 192,
+  "snapshot": "35dc3e8e7e8f2b14a808dab1f1a7a453906586bc",
+  "source": "https://huggingface.co/datasets/Verus-Team/Verus-Bench/blob/main/ground_truth.jsonl",
+  "verifiedDate": "2026-10-19"
+}
