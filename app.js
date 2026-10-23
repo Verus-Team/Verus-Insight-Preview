@@ -125,7 +125,7 @@
 
   async function initialize() {
     try {
-      const response = await fetch("data/site-content.json");
+      const response = await fetch("data/site-content.json?v=20261023-2", {cache: "no-store"});
       if (!response.ok) throw new Error(`Site data returned HTTP ${response.status}`);
       const data = await response.json();
       authors(data.project);
