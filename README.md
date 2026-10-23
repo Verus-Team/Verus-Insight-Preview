@@ -19,7 +19,7 @@ Verus-Insight 的英文研究主页，使用原生 HTML / CSS / JavaScript，无
 `ground_truth.jsonl` 核对的分类计数和来源提交。媒体分发覆盖 166/192 个样本；
 完整数据和已分发媒体子集保持区分。
 
-Paper 按钮等待真实 arXiv URL，不使用占位编号。已给出的 Code / Model / Dataset
+Paper 按钮链接至 [arXiv:2610.30866](https://arxiv.org/abs/2610.30866)。已给出的 Code / Model / Dataset
 链接可以打开发布页；链接可点击不代表已经匿名公开。可见性由资源托管平台控制。
 
 ## 本地预览

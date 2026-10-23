@@ -103,10 +103,10 @@
     {
       "id": "paper",
       "label": "Paper",
-      "url": null,
-      "published": false,
-      "caption": "arXiv link pending",
-      "linkToRelease": false
+      "url": "https://arxiv.org/abs/2610.30866",
+      "published": true,
+      "caption": "arXiv ↗",
+      "linkToRelease": true
     },
     {
       "id": "code",

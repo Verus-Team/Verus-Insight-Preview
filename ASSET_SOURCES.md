@@ -61,7 +61,8 @@ licenses remain non-commercial research/evaluation terms; the inference code
 retains its Apache-2.0 license. No license is reassigned by this website.
 
 The resource buttons link to release pages without asserting anonymous access.
-No real arXiv identifier was supplied; the Paper button stays pending.
+Paper: <https://arxiv.org/abs/2610.30866>, supplied by the project owner and
+verified against the arXiv title and author list on 2026-10-23.
 Website repository: `Verus-Team/Verus-Insight-Preview`.
 
 The initial layout reference was
