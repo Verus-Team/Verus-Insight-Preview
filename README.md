@@ -2,7 +2,7 @@
 
 Verus-Insight 的英文研究主页，使用原生 HTML / CSS / JavaScript，无构建依赖。
 
-- 代码：[Verus-Team/Verus-Insight](https://github.com/Verus-Team/Verus-Insight)
+- 代码：[zhangzhuoran997997/Verus-Insight](https://github.com/zhangzhuoran997997/Verus-Insight)
 - 模型：[Verus-Insight-8B](https://huggingface.co/Verus-Team/Verus-Insight-8B)
 - 数据：[Verus-Bench](https://huggingface.co/datasets/Verus-Team/Verus-Bench)
 - 网站目标：[Verus-Insight-Preview](https://github.com/Verus-Team/Verus-Insight-Preview)

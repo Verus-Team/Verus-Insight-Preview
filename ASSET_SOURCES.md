@@ -55,7 +55,7 @@ attribution remain with their source materials.
 
 ## Resources and hosting
 
-Code: <https://github.com/Verus-Team/Verus-Insight>.
+Code: <https://github.com/zhangzhuoran997997/Verus-Insight>.
 Model and dataset URLs are supplied by the project owner. Model and dataset
 licenses remain non-commercial research/evaluation terms; the inference code
 retains its Apache-2.0 license. No license is reassigned by this website.
